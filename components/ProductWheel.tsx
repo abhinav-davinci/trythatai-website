@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Compass, Building, Return, Spark } from "./icons";
 
@@ -323,8 +323,8 @@ function Card({ product, center }: { product: Product; center: boolean }) {
             </form>
           ) : (
             <a
-              href={product.id === "alon" ? "https://alon.trythat.ai/" : "https://realtors.trythat.ai/"}
-              className={`group/cta inline-flex items-center gap-2 rounded-full px-5 py-3 text-[13.5px] font-semibold text-white transition-transform hover:scale-[1.02] ${product.id === "alon" ? "bg-teal-deep" : "bg-blue-deep"}`}
+              href="https://realtors.trythat.ai/"
+              className="group/cta inline-flex items-center gap-2 rounded-full bg-blue-deep px-5 py-3 text-[13.5px] font-semibold text-white transition-transform hover:scale-[1.02]"
             >
               Know more
               <ArrowRight className="text-[1.1em] transition-transform group-hover/cta:translate-x-0.5" />
