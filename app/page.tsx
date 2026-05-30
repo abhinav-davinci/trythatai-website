@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import SplitProducts from "@/components/SplitProducts";
+import AlonJourney from "@/components/AlonJourney";
+import RealtorSection from "@/components/RealtorSection";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 
@@ -9,7 +10,8 @@ export default function Home() {
     <main className="relative min-h-screen">
       <Navbar />
       <Hero />
-      <SplitProducts />
+      <AlonJourney />
+      <RealtorSection />
       <Faq />
       <Footer />
     </main>
