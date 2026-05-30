@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Spark } from "./icons";
+import { ArrowRight, Check } from "./icons";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -12,6 +12,19 @@ const AGENTS = [
   { n: "Qualifier", s: "Screening 8 leads" },
   { n: "Analyst", s: "Drafting RealtyBrief" },
 ];
+
+function AlonMascot() {
+  return (
+    <svg viewBox="0 0 44 44" className="h-7 w-7" aria-hidden>
+      <path d="M11 41 C11 30.5 33 30.5 33 41 Z" fill="#fff" />
+      <circle cx="22" cy="17" r="8.6" fill="#fff" />
+      <rect x="15.2" y="13.4" width="13.6" height="6.6" rx="3.3" fill="#FF7E27" />
+      <rect x="11.2" y="14.4" width="3.6" height="6.2" rx="1.8" fill="#FF7E27" />
+      <rect x="29.2" y="14.4" width="3.6" height="6.2" rx="1.8" fill="#FF7E27" />
+      <rect x="18.8" y="33" width="6.4" height="3" rx="1.5" fill="#FF7E27" />
+    </svg>
+  );
+}
 
 export default function SplitProducts() {
   return (
@@ -32,28 +45,29 @@ export default function SplitProducts() {
 
         {/* the diptych */}
         <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
-          {/* ── ALON · buyers · orange ── */}
+          {/* ── ALON · buyers · navy + orange (ALON's own system) ── */}
           <motion.article
             initial={{ opacity: 0, y: 26 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
+            className="flex flex-col rounded-[26px] border border-white/10 p-7 sm:p-8"
+            style={{ background: "linear-gradient(180deg,#15294f 0%,#0e1d3b 100%)" }}
             transition={{ duration: 0.7, ease }}
-            className="flex flex-col rounded-[26px] border border-orange/20 bg-orange-soft p-7 sm:p-8"
           >
             <div className="flex items-start justify-between">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-orange-deep">trythat for buyers</p>
-                <h3 className="mt-2 font-serif text-[42px] font-medium leading-none text-ink">ALON</h3>
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-orange">trythat for buyers</p>
+                <h3 className="mt-2 font-serif text-[42px] font-medium leading-none text-white">ALON</h3>
               </div>
-              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-orange text-white shadow-[0_10px_24px_-10px_rgba(255,126,39,0.8)]">
-                <Spark className="text-[1.3em]" />
+              <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.05]">
+                <AlonMascot />
               </span>
             </div>
 
-            <p className="mt-6 text-[19px] font-semibold leading-snug tracking-tight text-ink">
+            <p className="mt-6 text-[19px] font-semibold leading-snug tracking-tight text-white">
               Your personal property scout, from first search to keys in hand.
             </p>
-            <p className="mt-3 text-[14.5px] leading-relaxed text-fg-mute">
+            <p className="mt-3 text-[14.5px] leading-relaxed text-white/55">
               ALON walks you through all 9 stages of buying: research, shortlisting, site visits, negotiation, legal, finance and possession.
             </p>
 
@@ -64,8 +78,8 @@ export default function SplitProducts() {
                 "Persona-tuned insights and area reports",
                 "Auto-drafted RealtyBriefs you can share",
               ].map((f) => (
-                <li key={f} className="flex items-center gap-2.5 text-[14px] text-ink">
-                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-orange/15 text-orange-deep">
+                <li key={f} className="flex items-center gap-2.5 text-[14px] text-white/90">
+                  <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-orange/20 text-orange">
                     <Check className="text-[12px]" />
                   </span>
                   {f}
@@ -74,31 +88,31 @@ export default function SplitProducts() {
             </ul>
 
             {/* 9-stage journey widget */}
-            <div className="mt-7 rounded-2xl border border-orange/20 bg-white/70 p-4">
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
               <div className="mb-2.5 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em]">
-                <span className="text-fg-faint">9-stage journey</span>
-                <span className="font-semibold text-orange-deep">stage 3 / 9</span>
+                <span className="text-white/40">9-stage journey</span>
+                <span className="font-semibold text-orange">stage 3 / 9</span>
               </div>
               <div className="flex gap-1">
                 {STAGES.map((s, i) => (
-                  <div key={s} className={`h-1.5 flex-1 rounded-full ${i < 3 ? "bg-orange" : "bg-orange/15"}`} />
+                  <div key={s} className={`h-1.5 flex-1 rounded-full ${i < 3 ? "bg-orange" : "bg-white/10"}`} />
                 ))}
               </div>
-              <div className="mt-2 flex justify-between text-[9.5px] text-fg-faint">
+              <div className="mt-2 flex justify-between text-[9.5px] text-white/40">
                 <span>Discover</span>
-                <span className="font-semibold text-orange-deep">Visit</span>
+                <span className="font-semibold text-orange">Visit</span>
                 <span>Move-in</span>
               </div>
             </div>
 
             <a
               href="https://alon.trythat.ai/"
-              className="group/cta mt-7 flex items-center justify-between rounded-2xl bg-orange px-5 py-3.5 text-white transition-transform hover:scale-[1.01]"
+              className="group/cta mt-7 flex items-center justify-between rounded-2xl bg-white px-5 py-3.5 transition-transform hover:scale-[1.01]"
             >
-              <span className="text-[15px] font-semibold">Start your search</span>
-              <span className="flex items-center gap-2 font-mono text-[12px] text-white/80">
+              <span className="text-[15px] font-bold text-orange-deep">Start your search</span>
+              <span className="flex items-center gap-2 font-mono text-[12px] text-orange-deep/70">
                 alon.trythat.ai
-                <ArrowRight className="text-[1.1em] text-white transition-transform group-hover/cta:translate-x-0.5" />
+                <ArrowRight className="text-[1.1em] text-orange-deep transition-transform group-hover/cta:translate-x-0.5" />
               </span>
             </a>
           </motion.article>
