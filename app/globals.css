@@ -32,7 +32,7 @@ body {
 
   /* the headline gradient where the two territories meet */
   .seam-text {
-    background-image: linear-gradient(100deg, #0d9488 0%, #2563eb 100%);
+    background-image: linear-gradient(100deg, #e2691a 0%, #2558a6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

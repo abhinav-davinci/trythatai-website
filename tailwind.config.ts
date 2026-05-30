@@ -36,10 +36,15 @@ const config: Config = {
           DEFAULT: "#3B82F6",
           bright: "#2563EB",
           deep: "#1D4ED8",
+          soft: "#EAF1FE",
         },
         wa: "#1FAE54",
         hot: "#E11D48",
         gold: "#B45309",
+        // ALON · buyers · warm orange
+        orange: { DEFAULT: "#FF7E27", deep: "#E2691A", soft: "#FBF1E8" },
+        // trythat brand accent · cool blue
+        tt: { DEFAULT: "#2558A6", deep: "#1D477F", soft: "#EAF1FB" },
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],

@@ -72,7 +72,7 @@ const PRODUCTS: Product[] = [
     tagline: "Scores listings, benchmarks prices, and checks RERA for the buyer.",
     features: ["Deal score", "Loan check", "Realty Brief"],
     Icon: Compass,
-    mediaBg: "from-teal-deep to-teal",
+    mediaBg: "from-ink to-ink-700",
     media: (
       <div className="flex h-full items-center justify-center gap-4 p-4">
         <div className="relative grid h-[68px] w-[68px] place-items-center">
