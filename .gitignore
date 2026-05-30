@@ -2,3 +2,7 @@ node_modules
 .next
 .DS_Store
 *.log
+
+# typescript build artifacts
+*.tsbuildinfo
+next-env.d.ts
