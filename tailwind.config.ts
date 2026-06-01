@@ -54,7 +54,6 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
         inter: ["var(--font-inter)", "system-ui", "sans-serif"],
-        instrument: ["var(--font-instrument)", "Georgia", "serif"],
       },
       letterSpacing: {
         tightest: "-0.045em",

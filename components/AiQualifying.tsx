@@ -60,7 +60,7 @@ function LeadRow({ lead, progress, calling, scored, isTop }: { lead: Lead; progr
         </span>
       ) : scored ? (
         <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1" style={{ background: c.bg, color: c.text }}>
-          <motion.span className="font-instrument text-[16px] leading-none">{display}</motion.span>
+          <motion.span className="text-[14px] font-bold leading-none tabular-nums">{display}</motion.span>
           <span className="text-[9px] font-bold uppercase tracking-wide">{lead.lvl}</span>
         </span>
       ) : (
@@ -180,7 +180,7 @@ export default function AiQualifying() {
           >
             <span className="text-[13px] font-semibold">Call {TOP.name.split(" ")[0]} first</span>
             <span className="inline-flex items-center gap-1.5">
-              <span className="font-instrument text-[18px] leading-none">{TOP.final}</span>
+              <span className="text-[16px] font-bold leading-none tabular-nums">{TOP.final}</span>
               <span className="rounded-md bg-white/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide">hot</span>
             </span>
           </motion.a>

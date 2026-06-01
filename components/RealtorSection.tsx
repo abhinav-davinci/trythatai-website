@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "./icons";
 import AiQualifying from "./AiQualifying";
 
-const POINTS = ["AI on every channel", "Ranked by intent", "Trained on your projects"];
+const POINTS = [
+  "Listings with AI-generated video and voice-over",
+  "AI workflows: voice and chat with every prospect",
+  "Lead qualification, bifurcation and routing",
+  "Automated marketing and a private data terminal",
+];
 
 export default function RealtorSection() {
   return (
@@ -18,17 +23,17 @@ export default function RealtorSection() {
           <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-ros">
             <span className="h-1.5 w-1.5 rounded-full bg-ros" /> trythat for sellers
           </span>
-          <h2 className="mt-4 text-[clamp(2.1rem,4.6vw,3.3rem)] font-bold leading-[1.0] tracking-tight text-ros-ink">
-            Know <span className="text-ros">whom to call</span> first.
+          <h2 className="mt-4 text-[clamp(2.1rem,4.6vw,3.3rem)] font-bold leading-[1.02] tracking-tight text-ros-ink">
+            Your AI sales team,<br />working while you sleep.
           </h2>
           <p className="mt-5 max-w-[33rem] text-[16.5px] leading-relaxed text-ros-mute">
-            <span className="font-semibold text-ros">RealtorOS</span> picks up every enquiry the second it lands, rings the lead back, answers from your knowledge base, and ranks who is ready to buy. Your team starts with the one most likely to book.
+            <span className="font-semibold text-ros">RealtorOS</span> is the operating system for realtors and FSBO sellers. It lists, markets, qualifies and follows up, so you only step in when a deal is ready. Qualifying is just one of the things it handles.
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2.5">
+          <div className="mt-7 grid gap-2.5 sm:grid-cols-2">
             {POINTS.map((p) => (
-              <span key={p} className="inline-flex items-center gap-1.5 text-[13.5px] text-[#3A3A4A]">
-                <span className="text-[#15803D]"><Check className="text-[14px]" /></span>
+              <span key={p} className="flex items-start gap-2 text-[13.5px] leading-snug text-[#3A3A4A]">
+                <span className="mt-0.5 shrink-0 text-[#15803D]"><Check className="text-[14px]" /></span>
                 {p}
               </span>
             ))}
