@@ -419,7 +419,7 @@ function AlonCard({ center }: { center: boolean }) {
         tabIndex={center ? 0 : -1}
         className="mt-auto flex w-full items-center justify-center gap-2 rounded-2xl bg-white py-3 text-[14px] font-bold text-[#FF7E27] transition-transform hover:scale-[1.02]"
       >
-        Launch ALON <ArrowRight className="text-[1.1em]" />
+        Know more <ArrowRight className="text-[1.1em]" />
       </a>
       <p className="mt-2.5 text-[10px] text-white/35">Free forever for buyers · No spam, ever</p>
     </div>
