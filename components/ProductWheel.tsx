@@ -46,7 +46,7 @@ const PRODUCTS: Product[] = [
     tagline: "List, market with AI video and voice, and keep every lead in one place.",
     features: ["AI video + voice", "Data Terminal", "Reports on demand"],
     Icon: Building,
-    mediaBg: "from-blue-deep to-blue",
+    mediaBg: "from-[#16407e] to-[#2157a6]",
     media: (
       <div className="flex h-full flex-col justify-center gap-2 p-3.5">
         {[
@@ -54,12 +54,12 @@ const PRODUCTS: Product[] = [
           { n: "Seema P.", src: "99acres", t: "WARM", s: 74 },
         ].map((l) => (
           <div key={l.n} className="flex items-center gap-2.5 rounded-xl bg-white px-2.5 py-2 shadow-sm">
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-blue text-[10px] font-bold text-white">{l.n[0]}</span>
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-[#0D2547] text-[10px] font-bold text-white">{l.n[0]}</span>
             <div className="min-w-0 flex-1 leading-tight">
               <p className="truncate text-[11.5px] font-semibold text-ink">{l.n}</p>
               <p className="text-[9.5px] text-fg-faint">via {l.src}</p>
             </div>
-            <span className="rounded bg-blue/12 px-1.5 py-0.5 text-[8.5px] font-bold tracking-wide text-blue-bright">{l.t}</span>
+            <span className={`rounded px-1.5 py-0.5 text-[8.5px] font-bold tracking-wide ${l.t === "HOT" ? "bg-[#FCE3E3] text-[#B3261E]" : "bg-[#FAEFD6] text-[#B45309]"}`}>{l.t}</span>
             <span className="font-mono text-[12px] font-bold text-ink">{l.s}</span>
           </div>
         ))}
@@ -325,7 +325,7 @@ function Card({ product, center }: { product: Product; center: boolean }) {
           ) : (
             <a
               href="https://realtors.trythat.ai/"
-              className="group/cta inline-flex items-center gap-2 rounded-full bg-blue-deep px-5 py-3 text-[13.5px] font-semibold text-white transition-transform hover:scale-[1.02]"
+              className="group/cta inline-flex items-center gap-2 rounded-full bg-[#0D2547] px-5 py-3 text-[13.5px] font-semibold text-white transition-transform hover:scale-[1.02]"
             >
               Know more
               <ArrowRight className="text-[1.1em] transition-transform group-hover/cta:translate-x-0.5" />
