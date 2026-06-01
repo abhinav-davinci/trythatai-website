@@ -74,9 +74,6 @@ export default function Navbar() {
             Platform
           </a>
           <UseCasesMenu />
-          <a href="#pricing" className={linkClass}>
-            Pricing
-          </a>
         </div>
 
         <div className="flex items-center gap-2 pr-1">

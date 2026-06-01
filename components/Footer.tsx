@@ -1,10 +1,33 @@
 import { ArrowRight } from "./icons";
 import Logo from "./Logo";
 
-const COLS: { title: string; links: string[] }[] = [
-  { title: "Platform", links: ["AI for buyers", "AI for sellers", "AI for all", "Pricing"] },
-  { title: "Company", links: ["About", "Careers", "Press", "Contact"] },
-  { title: "Legal", links: ["Privacy", "Terms", "Security"] },
+type Link = { label: string; href: string };
+const COLS: { title: string; links: Link[] }[] = [
+  {
+    title: "Platform",
+    links: [
+      { label: "AI for buyers", href: "#alon" },
+      { label: "AI for sellers", href: "#realtoros" },
+      { label: "AI for all", href: "#products" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Press", href: "#" },
+      { label: "Contact", href: "#" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+      { label: "Security", href: "#" },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -43,9 +66,9 @@ export default function Footer() {
                 <p className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-white/35">{c.title}</p>
                 <ul className="mt-4 space-y-2.5">
                   {c.links.map((l) => (
-                    <li key={l}>
-                      <a href="#" className="text-[14px] text-white/65 transition-colors hover:text-white">
-                        {l}
+                    <li key={l.label}>
+                      <a href={l.href} className="text-[14px] text-white/65 transition-colors hover:text-white">
+                        {l.label}
                       </a>
                     </li>
                   ))}
