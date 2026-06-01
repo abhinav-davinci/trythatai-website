@@ -10,6 +10,8 @@ type Id = "ai-chat" | "realtoros" | "alon";
 interface Product {
   id: Id;
   name: string;
+  audience: string; // the word after "Trythat for" — colour-coded per segment
+  audienceClass: string;
   kicker: string;
   tagline: string;
   features: string[];
@@ -22,6 +24,8 @@ const PRODUCTS: Product[] = [
   {
     id: "ai-chat",
     name: "Trythat for all",
+    audience: "all",
+    audienceClass: "seam-text",
     kicker: "The front door",
     tagline: "Type any property question and get a clear answer.",
     features: ["Insights", "Request Data", "Transactions"],
@@ -42,6 +46,8 @@ const PRODUCTS: Product[] = [
   {
     id: "realtoros",
     name: "Trythat for sellers",
+    audience: "sellers",
+    audienceClass: "text-[#2157A6]",
     kicker: "The sellers' desk",
     tagline: "List, market with AI video and voice, and keep every lead in one place.",
     features: ["AI video + voice", "Data Terminal", "Reports on demand"],
@@ -69,6 +75,8 @@ const PRODUCTS: Product[] = [
   {
     id: "alon",
     name: "Trythat for buyers",
+    audience: "buyers",
+    audienceClass: "text-[#E2691A]",
     kicker: "For buyers",
     tagline: "Scores listings, benchmarks prices, and checks RERA for the buyer.",
     features: ["Deal score", "Loan check", "Realty Brief"],
@@ -299,7 +307,9 @@ function Card({ product, center }: { product: Product; center: boolean }) {
       </div>
 
       <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
-        <h3 className="text-[25px] font-semibold leading-none tracking-tighter2 text-ink">{product.name}</h3>
+        <h3 className="text-[25px] font-semibold leading-none tracking-tighter2 text-ink">
+          Trythat for <span className={product.audienceClass}>{product.audience}</span>
+        </h3>
         <p className="mt-2.5 text-[13.5px] leading-[1.45] text-fg-mute">{product.tagline}</p>
 
         <div className="mt-3.5 flex flex-wrap gap-1.5">
@@ -394,12 +404,13 @@ function AlonCard({ center }: { center: boolean }) {
         <AlonAvatar size={42} showRings={false} />
       </div>
 
-      <h3 className="mt-3 font-serif text-[30px] font-semibold leading-none tracking-wide text-white">Trythat</h3>
-      <p className="mt-1.5 font-mono text-[10.5px] uppercase tracking-[0.2em] text-orange">for buyers</p>
+      <h3 className="mt-3 text-[28px] font-bold leading-none tracking-tighter2 text-white">
+        Trythat for <span className="text-orange">buyers</span>
+      </h3>
       <p className="mt-2 text-[12.5px] leading-snug text-white/65">Your personal AI for the entire home-buying journey</p>
 
       <div className="mt-4 w-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-3 text-left">
-        <p className="mb-2 font-serif text-[13px] font-semibold text-white/85">My Promises</p>
+        <p className="mb-2 text-[13px] font-semibold text-white/85">My Promises</p>
         <div className="space-y-2">
           {PROMISES.map((p) => (
             <div key={p.t} className="flex items-start gap-2.5">

@@ -1,24 +1,12 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, JetBrains_Mono, Playfair_Display, Inter } from "next/font/google";
+import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
-const display = Schibsted_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  display: "swap",
-});
-
-const serif = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
   display: "swap",
 });
 
@@ -34,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable} ${inter.variable}`}>
+    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
         {children}
       </body>

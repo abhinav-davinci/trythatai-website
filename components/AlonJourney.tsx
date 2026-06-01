@@ -182,7 +182,7 @@ export default function AlonJourney() {
             </h2>
           </div>
           <p className="max-w-[24rem] text-[15px] leading-relaxed text-white/55">
-            From your first search to the day you get the keys, <span className="font-serif text-white">Trythat</span> walks you through the whole buy. Watch it work.
+            From your first search to the day you get the keys, <span className="font-semibold text-white">Trythat</span> walks you through the whole buy. Watch it work.
           </p>
         </div>
 
@@ -227,8 +227,11 @@ export default function AlonJourney() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.3, ease }}
               >
-                <div className="flex items-center gap-4">
-                  <span className="font-serif text-[clamp(3.5rem,8vw,5.5rem)] font-medium leading-none text-orange/90">{s.n}</span>
+                <div className="flex items-baseline gap-4">
+                  <span className="text-[clamp(2.8rem,6vw,4.4rem)] font-bold leading-none tracking-tight tabular-nums">
+                    <span className="text-orange/35">{s.n[0]}</span>
+                    <span className="text-orange">{s.n[1]}</span>
+                  </span>
                   <h3 className="text-[clamp(1.8rem,3.4vw,2.6rem)] font-semibold tracking-tight text-white">{s.name}</h3>
                 </div>
                 <p className="mt-5 max-w-[30rem] text-[16.5px] leading-relaxed text-white/65">{s.desc}</p>
@@ -247,7 +250,7 @@ export default function AlonJourney() {
           {/* the live screen */}
           <div className="rounded-[22px] border border-white/10 bg-[#0c1a33]/80 shadow-[0_40px_90px_-50px_rgba(0,0,0,0.9)] backdrop-blur">
             <div className="flex items-center gap-2 border-b border-white/[0.08] px-4 py-3">
-              <span className="font-serif text-[15px] text-white">Trythat</span>
+              <span className="text-[15px] font-bold tracking-tight text-white">Trythat</span>
               <span className="ml-auto inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-white/40">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-orange" /> working
               </span>
