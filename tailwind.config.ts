@@ -45,12 +45,16 @@ const config: Config = {
         orange: { DEFAULT: "#FF7E27", deep: "#E2691A", soft: "#FBF1E8" },
         // trythat brand accent · cool blue
         tt: { DEFAULT: "#2558A6", deep: "#1D477F", soft: "#EAF1FB" },
+        // RealtorOS · matches realtors.trythat.ai exactly
+        ros: { DEFAULT: "#2157A6", navy: "#0D2547", ink: "#0A0A12", mute: "#6B6877", bg: "#FAF9F5" },
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
         sans: ["var(--font-display)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
+        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        instrument: ["var(--font-instrument)", "Georgia", "serif"],
       },
       letterSpacing: {
         tightest: "-0.045em",

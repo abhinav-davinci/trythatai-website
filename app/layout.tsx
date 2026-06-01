@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, JetBrains_Mono, Playfair_Display } from "next/font/google";
+import { Schibsted_Grotesk, JetBrains_Mono, Playfair_Display, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const instrument = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: "--font-instrument", display: "swap" });
 
 const display = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -32,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" className={`${display.variable} ${mono.variable} ${serif.variable} ${inter.variable} ${instrument.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
         {children}
       </body>
