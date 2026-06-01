@@ -6,3 +6,9 @@ node_modules
 # typescript build artifacts
 *.tsbuildinfo
 next-env.d.ts
+
+# test/screenshot artifacts
+.playwright-mcp
+*.jpeg
+*.jpg
+*.png
