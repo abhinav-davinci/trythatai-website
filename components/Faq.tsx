@@ -15,12 +15,12 @@ const QA = [
     a: "We are live in Pune today, with more Indian cities rolling out through the year.",
   },
   {
-    q: "What's the difference between ALON and RealtorOS?",
-    a: "ALON is for buyers and runs the full 9-stage buying journey. RealtorOS is for sellers and builders to list, market, qualify leads and close.",
+    q: "What's the difference between Trythat for buyers and for sellers?",
+    a: "Trythat for buyers runs the full 9-stage buying journey. Trythat for sellers helps realtors and builders list, market, qualify leads and close. Same platform, one for each side of the deal.",
   },
   {
     q: "How does trythat make money?",
-    a: "Buyers use ALON free. Sellers pay for RealtorOS agents and consumables like AI video, voice minutes and data credits.",
+    a: "Buyers use Trythat free. Sellers pay for AI agents and consumables like AI video, voice minutes and data credits.",
   },
   {
     q: "Is my data safe?",

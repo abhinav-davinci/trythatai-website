@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { ArrowRight } from "./icons";
 
-const NAV = ["Products", "ALON", "RealtorOS", "Pricing"];
+const NAV = [
+  { label: "Platform", href: "#products" },
+  { label: "For buyers", href: "#alon" },
+  { label: "For sellers", href: "#realtoros" },
+  { label: "Pricing", href: "#pricing" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,11 +37,11 @@ export default function Navbar() {
         <div className="hidden items-center rounded-full bg-ink/[0.04] p-1 lg:flex">
           {NAV.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="rounded-full px-4 py-1.5 text-[14px] font-medium text-fg-mute transition-colors hover:bg-paper hover:text-ink"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>

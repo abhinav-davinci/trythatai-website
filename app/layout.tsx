@@ -25,7 +25,7 @@ const serif = Playfair_Display({
 export const metadata: Metadata = {
   title: "trythat.ai · India's real estate super app",
   description:
-    "India's real estate super app for buyers and sellers. ALON helps you buy, RealtorOS helps you sell, and AI-Chat answers your property questions.",
+    "India's real estate super app for buyers and sellers. Trythat helps you buy, sell and find any property, all in one place.",
 };
 
 export default function RootLayout({

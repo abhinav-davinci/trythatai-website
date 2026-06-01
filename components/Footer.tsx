@@ -2,7 +2,7 @@ import { ArrowRight } from "./icons";
 import Logo from "./Logo";
 
 const COLS: { title: string; links: string[] }[] = [
-  { title: "Products", links: ["AI-Chat", "ALON", "RealtorOS", "Pricing"] },
+  { title: "Platform", links: ["For buyers", "For sellers", "For everyone", "Pricing"] },
   { title: "Company", links: ["About", "Careers", "Press", "Contact"] },
   { title: "Legal", links: ["Privacy", "Terms", "Security"] },
 ];

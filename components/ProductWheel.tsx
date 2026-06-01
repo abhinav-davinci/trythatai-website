@@ -21,7 +21,7 @@ interface Product {
 const PRODUCTS: Product[] = [
   {
     id: "ai-chat",
-    name: "AI-Chat",
+    name: "Trythat for all",
     kicker: "The front door",
     tagline: "Type any property question and get a clear answer.",
     features: ["Insights", "Request Data", "Transactions"],
@@ -41,8 +41,8 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "realtoros",
-    name: "RealtorOS",
-    kicker: "For sellers & builders",
+    name: "Trythat for sellers",
+    kicker: "The sellers' desk",
     tagline: "List, market with AI video and voice, and keep every lead in one place.",
     features: ["AI video + voice", "Data Terminal", "Reports on demand"],
     Icon: Building,
@@ -68,7 +68,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "alon",
-    name: "ALON",
+    name: "Trythat for buyers",
     kicker: "For buyers",
     tagline: "Scores listings, benchmarks prices, and checks RERA for the buyer.",
     features: ["Deal score", "Loan check", "Realty Brief"],
@@ -394,7 +394,8 @@ function AlonCard({ center }: { center: boolean }) {
         <AlonAvatar size={42} showRings={false} />
       </div>
 
-      <h3 className="mt-3 font-serif text-[32px] font-semibold leading-none tracking-wide text-white">ALON</h3>
+      <h3 className="mt-3 font-serif text-[30px] font-semibold leading-none tracking-wide text-white">Trythat</h3>
+      <p className="mt-1.5 font-mono text-[10.5px] uppercase tracking-[0.2em] text-orange">for buyers</p>
       <p className="mt-2 text-[12.5px] leading-snug text-white/65">Your personal AI for the entire home-buying journey</p>
 
       <div className="mt-4 w-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-3 text-left">

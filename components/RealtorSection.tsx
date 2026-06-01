@@ -27,7 +27,7 @@ export default function RealtorSection() {
             Your AI sales team,<br />working while you sleep.
           </h2>
           <p className="mt-5 max-w-[33rem] text-[16.5px] leading-relaxed text-ros-mute">
-            <span className="font-semibold text-ros">RealtorOS</span> is the operating system for realtors and FSBO sellers. It lists, markets, qualifies and follows up, so you only step in when a deal is ready. Qualifying is just one of the things it handles.
+            <span className="font-semibold text-ros">Trythat for sellers</span> is the operating system for realtors and FSBO sellers. It lists, markets, qualifies and follows up, so you only step in when a deal is ready. Qualifying is just one of the things it handles.
           </p>
 
           <div className="mt-7 grid gap-2.5 sm:grid-cols-2">

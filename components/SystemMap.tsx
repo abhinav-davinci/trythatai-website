@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Check, Spark } from "./icons";
+import { ArrowUpRight, Building, Check, Spark } from "./icons";
 import AlonAvatar from "./AlonAvatar";
 
 type AppId = "ai-chat" | "alon" | "realtoros";
@@ -22,8 +22,8 @@ interface App {
 const APPS: App[] = [
   {
     id: "ai-chat",
-    name: "AI Chat",
-    role: "discovery · the front door",
+    name: "Trythat for all",
+    role: "the front door",
     url: "listings.trythat.ai",
     link: "https://trythat.ai/",
     color: "#2558A6",
@@ -40,8 +40,8 @@ const APPS: App[] = [
   },
   {
     id: "alon",
-    name: "ALON",
-    role: "for buyers",
+    name: "Trythat for buyers",
+    role: "search to keys",
     url: "buyers.trythat.ai",
     link: "https://alon.trythat.ai/",
     color: "#FF7E27",
@@ -55,8 +55,8 @@ const APPS: App[] = [
   },
   {
     id: "realtoros",
-    name: "RealtorOS",
-    role: "for sellers",
+    name: "Trythat for sellers",
+    role: "list to close",
     url: "sellers.trythat.ai",
     link: "https://realtors.trythat.ai/",
     color: "#3B82F6",
@@ -170,7 +170,7 @@ export default function SystemMap() {
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl" style={{ backgroundColor: app.id === "alon" ? "rgba(255,255,255,0.06)" : app.color, border: app.id === "alon" ? "1px solid rgba(255,255,255,0.12)" : "none" }}>
                     {app.id === "ai-chat" && <Spark className="text-[1.25em] text-white" />}
                     {app.id === "alon" && <AlonAvatar size={28} showRings={false} />}
-                    {app.id === "realtoros" && <span className="font-serif text-[19px] font-semibold text-white">R</span>}
+                    {app.id === "realtoros" && <Building className="text-[1.25em] text-white" />}
                   </span>
                   <div className="min-w-0">
                     <h3 className="text-[20px] font-bold leading-none tracking-tight text-white">{app.name}</h3>
@@ -208,7 +208,7 @@ export default function SystemMap() {
         </div>
 
         <p className="mt-10 text-center font-mono text-[11px] uppercase tracking-[0.16em] text-white/35">
-          Insights &amp; RealtyBrief ship across every app
+          Insights &amp; RealtyBrief ship across every Trythat app
         </p>
       </div>
     </section>

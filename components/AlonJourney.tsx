@@ -182,7 +182,7 @@ export default function AlonJourney() {
             </h2>
           </div>
           <p className="max-w-[24rem] text-[15px] leading-relaxed text-white/55">
-            From your first search to the day you get the keys, <span className="font-serif text-white">ALON</span> walks you through the whole buy. Watch it work.
+            From your first search to the day you get the keys, <span className="font-serif text-white">Trythat</span> walks you through the whole buy. Watch it work.
           </p>
         </div>
 
@@ -247,7 +247,7 @@ export default function AlonJourney() {
           {/* the live screen */}
           <div className="rounded-[22px] border border-white/10 bg-[#0c1a33]/80 shadow-[0_40px_90px_-50px_rgba(0,0,0,0.9)] backdrop-blur">
             <div className="flex items-center gap-2 border-b border-white/[0.08] px-4 py-3">
-              <span className="font-serif text-[15px] text-white">ALON</span>
+              <span className="font-serif text-[15px] text-white">Trythat</span>
               <span className="ml-auto inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-white/40">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-orange" /> working
               </span>
