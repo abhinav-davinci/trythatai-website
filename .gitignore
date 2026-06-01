@@ -7,8 +7,8 @@ node_modules
 *.tsbuildinfo
 next-env.d.ts
 
-# test/screenshot artifacts
-.playwright-mcp
-*.jpeg
-*.jpg
-*.png
+# test/screenshot artifacts (root-level only; keep public/ images trackable)
+.playwright-mcp/
+/*.jpeg
+/*.jpg
+/*.png
