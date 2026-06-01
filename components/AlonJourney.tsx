@@ -3,9 +3,10 @@
 import { useEffect, useState, type JSX } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Check } from "./icons";
+import AlonAvatar from "./AlonAvatar";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-const CYCLE = 3400;
+const CYCLE = 2400;
 
 function Chip({ children }: { children: React.ReactNode }) {
   return (
@@ -20,6 +21,20 @@ function Row({ a, b, dot = "bg-orange" }: { a: string; b: string; dot?: string }
       <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />
       <span className="flex-1 truncate text-[12.5px] text-white/85">{a}</span>
       <span className="font-mono text-[12px] text-white/55">{b}</span>
+    </div>
+  );
+}
+function Slider({ label, value, pct }: { label: string; value: string; pct: number }) {
+  return (
+    <div>
+      <div className="mb-1.5 flex items-center justify-between text-[12px]">
+        <span className="text-white/55">{label}</span>
+        <span className="font-semibold text-white">{value}</span>
+      </div>
+      <div className="relative h-1.5 rounded-full bg-white/10">
+        <div className="absolute inset-y-0 left-0 rounded-full bg-orange" style={{ width: `${pct}%` }} />
+        <span className="absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-orange bg-[#0c1a33]" style={{ left: `calc(${pct}% - 6px)` }} />
+      </div>
     </div>
   );
 }
@@ -65,12 +80,23 @@ const VISUALS: JSX.Element[] = [
     </div>
     <p className="text-[12px] font-semibold text-orange">8% below market · real transaction data</p>
   </div>,
-  // 05 Finance
-  <div key="f" className="space-y-2">
-    <Row a="HDFC · home loan" b="8.40%" />
-    <Row a="SBI · home loan" b="8.45%" dot="bg-white/30" />
-    <Row a="ICICI · home loan" b="8.55%" dot="bg-white/30" />
-    <p className="text-[12px] text-white/70">Pre-approved · EMI ≈ <span className="font-semibold text-white">₹62,400</span>/mo</p>
+  // 05 Finance — plan the loan with an EMI calculator
+  <div key="f" className="space-y-3">
+    <p className="font-mono text-[11px] text-white/40">plan your loan</p>
+    <Slider label="Loan amount" value="₹62L" pct={62} />
+    <Slider label="Tenure" value="20 yrs" pct={66} />
+    <Slider label="Interest rate" value="8.4%" pct={40} />
+    <div className="flex items-center justify-between rounded-xl border border-orange/30 bg-orange/[0.08] px-3.5 py-2.5">
+      <div>
+        <p className="font-mono text-[10px] uppercase tracking-wider text-white/45">Monthly EMI</p>
+        <p className="mt-0.5 text-[22px] font-bold leading-none text-white">
+          ₹53,400<span className="ml-1 text-[12px] font-normal text-white/45">/mo</span>
+        </p>
+      </div>
+      <span className="inline-flex items-center gap-1 rounded-md bg-orange/15 px-2 py-1 text-[10.5px] font-semibold text-orange">
+        <Check className="text-[11px]" /> Pre-approved
+      </span>
+    </div>
   </div>,
   // 06 Legal
   <div key="l" className="space-y-2.5">
@@ -116,14 +142,13 @@ const STAGES = [
 
 export default function AlonJourney() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
+  // `nudge` bumps on manual click to restart the timer from the chosen stage
   const [nudge, setNudge] = useState(0);
 
   useEffect(() => {
-    if (paused) return;
     const t = setInterval(() => setActive((a) => (a + 1) % STAGES.length), CYCLE);
     return () => clearInterval(t);
-  }, [paused, nudge]);
+  }, [nudge]);
 
   const pick = (i: number) => {
     setNudge((n) => n + 1);
@@ -137,8 +162,6 @@ export default function AlonJourney() {
       id="alon"
       className="relative overflow-hidden px-5 py-24 text-white sm:py-28"
       style={{ background: "linear-gradient(180deg,#142a52 0%,#0b1a36 60%,#0a1730 100%)" }}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       {/* atmosphere */}
       <div className="pointer-events-none absolute inset-0">
@@ -150,6 +173,7 @@ export default function AlonJourney() {
         {/* header */}
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
+            <AlonAvatar size={72} className="mb-7" />
             <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-orange">
               <span className="h-1.5 w-1.5 rounded-full bg-orange" /> trythat for buyers · the journey
             </span>
@@ -183,7 +207,7 @@ export default function AlonJourney() {
                   </button>
                   {i < STAGES.length - 1 && (
                     <span className="mt-[26px] h-px flex-1 overflow-hidden bg-white/12">
-                      <motion.span className="block h-full bg-orange" initial={false} animate={{ width: i < active ? "100%" : "0%" }} transition={{ duration: 0.5, ease }} />
+                      <motion.span className="block h-full bg-orange" initial={false} animate={{ width: i < active ? "100%" : "0%" }} transition={{ duration: 0.4, ease }} />
                     </span>
                   )}
                 </div>
@@ -198,10 +222,10 @@ export default function AlonJourney() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={active}
-                initial={{ opacity: 0, y: 14 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.45, ease }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3, ease }}
               >
                 <div className="flex items-center gap-4">
                   <span className="font-serif text-[clamp(3.5rem,8vw,5.5rem)] font-medium leading-none text-orange/90">{s.n}</span>
@@ -232,10 +256,10 @@ export default function AlonJourney() {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active}
-                  initial={{ opacity: 0, x: 16 }}
+                  initial={{ opacity: 0, x: 14 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -16 }}
-                  transition={{ duration: 0.4, ease }}
+                  exit={{ opacity: 0, x: -14 }}
+                  transition={{ duration: 0.3, ease }}
                 >
                   {VISUALS[active]}
                 </motion.div>

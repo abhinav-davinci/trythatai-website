@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Compass, Building, Return, Spark } from "./icons";
+import AlonAvatar from "./AlonAvatar";
 
 type Id = "ai-chat" | "realtoros" | "alon";
 
@@ -337,19 +338,6 @@ function Card({ product, center }: { product: Product; center: boolean }) {
 }
 
 /* ── ALON · branded card, matching ALON's own intro screen ── */
-function AlonMascot() {
-  return (
-    <svg viewBox="0 0 44 44" className="h-9 w-9" aria-hidden>
-      <path d="M11 41 C11 30.5 33 30.5 33 41 Z" fill="#fff" />
-      <circle cx="22" cy="17" r="8.6" fill="#fff" />
-      <rect x="15.2" y="13.4" width="13.6" height="6.6" rx="3.3" fill="#FF7E27" />
-      <rect x="11.2" y="14.4" width="3.6" height="6.2" rx="1.8" fill="#FF7E27" />
-      <rect x="29.2" y="14.4" width="3.6" height="6.2" rx="1.8" fill="#FF7E27" />
-      <rect x="18.8" y="33" width="6.4" height="3" rx="1.5" fill="#FF7E27" />
-    </svg>
-  );
-}
-
 const PROMISES = [
   {
     t: "Your contact is yours",
@@ -403,7 +391,7 @@ function AlonCard({ center }: { center: boolean }) {
       </div>
 
       <div className="mt-3 grid h-[58px] w-[58px] place-items-center rounded-2xl border border-white/10 bg-white/[0.05]">
-        <AlonMascot />
+        <AlonAvatar size={42} showRings={false} />
       </div>
 
       <h3 className="mt-3 font-serif text-[32px] font-semibold leading-none tracking-wide text-white">ALON</h3>

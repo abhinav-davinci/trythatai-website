@@ -1,4 +1,5 @@
 import { ArrowRight } from "./icons";
+import Logo from "./Logo";
 
 const COLS: { title: string; links: string[] }[] = [
   { title: "Products", links: ["AI-Chat", "ALON", "RealtorOS", "Pricing"] },
@@ -22,10 +23,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           {/* brand */}
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-[26px] font-bold tracking-tightest text-white">trythat</span>
-              <span className="rounded-[7px] bg-gradient-to-br from-tt to-blue px-1.5 py-0.5 text-[15px] font-bold leading-none text-white">.ai</span>
-            </div>
+            <Logo className="h-8" />
             <p className="mt-4 max-w-[24rem] text-[15px] leading-relaxed text-white/55">
               India&apos;s real estate super app. One platform for every side of the deal.
             </p>
