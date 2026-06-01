@@ -22,7 +22,7 @@ interface App {
 const APPS: App[] = [
   {
     id: "ai-chat",
-    name: "Trythat for all",
+    name: "AI for all",
     role: "the front door",
     url: "listings.trythat.ai",
     link: "https://trythat.ai/",
@@ -40,7 +40,7 @@ const APPS: App[] = [
   },
   {
     id: "alon",
-    name: "Trythat for buyers",
+    name: "AI for buyers",
     role: "search to keys",
     url: "buyers.trythat.ai",
     link: "https://alon.trythat.ai/",
@@ -55,7 +55,7 @@ const APPS: App[] = [
   },
   {
     id: "realtoros",
-    name: "Trythat for sellers",
+    name: "AI for sellers",
     role: "list to close",
     url: "sellers.trythat.ai",
     link: "https://realtors.trythat.ai/",

@@ -15,8 +15,8 @@ const QA = [
     a: "We are live in Pune today, with more Indian cities rolling out through the year.",
   },
   {
-    q: "What's the difference between Trythat for buyers and for sellers?",
-    a: "Trythat for buyers runs the full 9-stage buying journey. Trythat for sellers helps realtors and builders list, market, qualify leads and close. Same platform, one for each side of the deal.",
+    q: "What's the difference between AI for buyers and for sellers?",
+    a: "AI for buyers runs the full 9-stage buying journey. AI for sellers helps realtors and builders list, market, qualify leads and close. Same platform, one for each side of the deal.",
   },
   {
     q: "How does trythat make money?",

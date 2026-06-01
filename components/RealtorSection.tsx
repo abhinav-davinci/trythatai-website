@@ -21,13 +21,13 @@ export default function RealtorSection() {
         {/* left — pitch (RealtorOS brand) */}
         <div>
           <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-ros">
-            <span className="h-1.5 w-1.5 rounded-full bg-ros" /> trythat for sellers
+            <span className="h-1.5 w-1.5 rounded-full bg-ros" /> AI for sellers
           </span>
           <h2 className="mt-4 text-[clamp(2.1rem,4.6vw,3.3rem)] font-bold leading-[1.02] tracking-tight text-ros-ink">
             Your AI sales team,<br />working while you sleep.
           </h2>
           <p className="mt-5 max-w-[33rem] text-[16.5px] leading-relaxed text-ros-mute">
-            <span className="font-semibold text-ros">Trythat for sellers</span> is the operating system for realtors and FSBO sellers. It lists, markets, qualifies and follows up, so you only step in when a deal is ready. Qualifying is just one of the things it handles.
+            <span className="font-semibold text-ros">AI for sellers</span> is the operating system for realtors and FSBO sellers. It lists, markets, qualifies and follows up, so you only step in when a deal is ready. Qualifying is just one of the things it handles.
           </p>
 
           <div className="mt-7 grid gap-2.5 sm:grid-cols-2">

@@ -175,7 +175,7 @@ export default function AlonJourney() {
           <div>
             <AlonAvatar size={72} className="mb-7" />
             <span className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-orange">
-              <span className="h-1.5 w-1.5 rounded-full bg-orange" /> trythat for buyers · the journey
+              <span className="h-1.5 w-1.5 rounded-full bg-orange" /> AI for buyers · the journey
             </span>
             <h2 className="mt-4 text-[clamp(2rem,4.4vw,3.1rem)] font-semibold leading-[1.04] tracking-tightest text-white">
               Nine stages. One AI.<br />Every step handled.

@@ -5,8 +5,8 @@ import Logo from "./Logo";
 import { ArrowRight, ChevronDown } from "./icons";
 
 const USE_CASES = [
-  { label: "For Buyers", href: "#alon", color: "#E2691A" },
-  { label: "For Sellers", href: "#realtoros", color: "#2157A6" },
+  { label: "AI for Buyers", href: "#alon", color: "#E2691A" },
+  { label: "AI for Sellers", href: "#realtoros", color: "#2157A6" },
 ];
 
 const linkClass = "rounded-full px-4 py-1.5 text-[14px] font-medium text-fg-mute transition-colors hover:bg-paper hover:text-ink";

@@ -10,7 +10,7 @@ type Id = "ai-chat" | "realtoros" | "alon";
 interface Product {
   id: Id;
   name: string;
-  audience: string; // the word after "Trythat for" — colour-coded per segment
+  audience: string; // the word after "AI for" — colour-coded per segment
   audienceClass: string;
   kicker: string;
   tagline: string;
@@ -23,7 +23,7 @@ interface Product {
 const PRODUCTS: Product[] = [
   {
     id: "ai-chat",
-    name: "Trythat for all",
+    name: "AI for all",
     audience: "all",
     audienceClass: "seam-text",
     kicker: "The front door",
@@ -45,7 +45,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "realtoros",
-    name: "Trythat for sellers",
+    name: "AI for sellers",
     audience: "sellers",
     audienceClass: "text-[#2157A6]",
     kicker: "The sellers' desk",
@@ -74,7 +74,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "alon",
-    name: "Trythat for buyers",
+    name: "AI for buyers",
     audience: "buyers",
     audienceClass: "text-[#E2691A]",
     kicker: "For buyers",
@@ -308,7 +308,7 @@ function Card({ product, center }: { product: Product; center: boolean }) {
 
       <div className="flex flex-1 flex-col px-5 pb-5 pt-4">
         <h3 className="text-[25px] font-semibold leading-none tracking-tighter2 text-ink">
-          Trythat for <span className={product.audienceClass}>{product.audience}</span>
+          AI for <span className={product.audienceClass}>{product.audience}</span>
         </h3>
         <p className="mt-2.5 text-[13.5px] leading-[1.45] text-fg-mute">{product.tagline}</p>
 
@@ -405,7 +405,7 @@ function AlonCard({ center }: { center: boolean }) {
       </div>
 
       <h3 className="mt-3 text-[28px] font-bold leading-none tracking-tighter2 text-white">
-        Trythat for <span className="text-orange">buyers</span>
+        AI for <span className="text-orange">buyers</span>
       </h3>
       <p className="mt-2 text-[12.5px] leading-snug text-white/65">Your personal AI for the entire home-buying journey</p>
 
