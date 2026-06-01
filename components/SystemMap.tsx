@@ -95,10 +95,10 @@ export default function SystemMap() {
             <span className="h-px w-6 bg-white/30" /> The platform
           </span>
           <h2 className="mt-5 text-[clamp(1.9rem,3.8vw,2.9rem)] font-semibold leading-[1.05] tracking-tightest text-white">
-            One super-app. Three apps.
+            One platform, three specialists.
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-white/55">
-            trythat.ai is one platform with three focused apps. Hover a branch to see what each one handles.
+            One account, three apps, each built for a different side of the deal. Hover a branch to see what it does.
           </p>
         </div>
 
