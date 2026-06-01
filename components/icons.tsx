@@ -21,6 +21,12 @@ export const Return = (p: I) => (
   </svg>
 );
 
+export const ChevronDown = (p: I) => (
+  <svg viewBox="0 0 20 20" fill="none" width="1em" height="1em" {...p}>
+    <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export const Spark = (p: I) => (
   <svg viewBox="0 0 24 24" fill="none" width="1em" height="1em" {...p}>
     <path d="M12 3c.5 4.2 1.8 5.5 6 6-4.2.5-5.5 1.8-6 6-.5-4.2-1.8-5.5-6-6 4.2-.5 5.5-1.8 6-6Z" fill="currentColor" />

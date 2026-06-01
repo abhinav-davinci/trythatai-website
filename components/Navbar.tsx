@@ -2,14 +2,49 @@
 
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
-import { ArrowRight } from "./icons";
+import { ArrowRight, ChevronDown } from "./icons";
 
-const NAV = [
-  { label: "Platform", href: "#products" },
-  { label: "For buyers", href: "#alon" },
-  { label: "For sellers", href: "#realtoros" },
-  { label: "Pricing", href: "#pricing" },
+const USE_CASES = [
+  { label: "For Buyers", href: "#alon", color: "#E2691A" },
+  { label: "For Sellers", href: "#realtoros", color: "#2157A6" },
 ];
+
+const linkClass = "rounded-full px-4 py-1.5 text-[14px] font-medium text-fg-mute transition-colors hover:bg-paper hover:text-ink";
+
+function UseCasesMenu() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className={`flex items-center gap-1 ${linkClass} ${open ? "bg-paper text-ink" : ""}`}
+      >
+        Use Cases
+        <ChevronDown className={`text-[1.05em] transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      {open && (
+        <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2.5">
+          <div className="min-w-[184px] rounded-2xl border border-line bg-paper p-1.5 shadow-[0_24px_56px_-22px_rgba(15,23,41,0.4)]">
+            {USE_CASES.map((c) => (
+              <a
+                key={c.href}
+                href={c.href}
+                onClick={() => setOpen(false)}
+                className="group/uc flex items-center gap-2.5 rounded-xl px-3 py-2.5 transition-colors hover:bg-ink/[0.04]"
+              >
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: c.color }} />
+                <span className="text-[14px] font-medium text-ink">{c.label}</span>
+                <ArrowRight className="ml-auto text-[1em] text-fg-faint opacity-0 transition-all group-hover/uc:translate-x-0.5 group-hover/uc:opacity-100" />
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,15 +70,13 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center rounded-full bg-ink/[0.04] p-1 lg:flex">
-          {NAV.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="rounded-full px-4 py-1.5 text-[14px] font-medium text-fg-mute transition-colors hover:bg-paper hover:text-ink"
-            >
-              {item.label}
-            </a>
-          ))}
+          <a href="#products" className={linkClass}>
+            Platform
+          </a>
+          <UseCasesMenu />
+          <a href="#pricing" className={linkClass}>
+            Pricing
+          </a>
         </div>
 
         <div className="flex items-center gap-2 pr-1">
